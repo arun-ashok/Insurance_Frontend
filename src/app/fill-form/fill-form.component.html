@@ -1,0 +1,160 @@
+<div>
+    <mat-card fxFlex="90">
+        <mat-toolbar color="primary">Fill the form and submit</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="saveform()">
+        <mat-form-field>
+          <mat-label>Name of vendor/service provider </mat-label>
+          <input matInput placeholder="Name of vendor/service provider" formControlName="a1">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Constituion of vendor/service provider</mat-label>
+            <input matInput placeholder="Constituion of vendor/service provider" formControlName="a2">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Whether vendor/service provider is an Indian entity or foreign entity.</mat-label>
+            <input matInput placeholder="Whether vendor/service provider is an Indian entity or foreign entity." formControlName="a3">
+        </mat-form-field>
+        <br/>          
+        <mat-form-field>
+            <mat-label>Nature/scope of services [please provide the full details point wise and including process as to how it is implemented].</mat-label>
+            <input matInput placeholder="Nature/scope of services [please provide the full details point wise and including process as to how it is implemented]." formControlName="a4">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Please specify whether the Service Provider will provide only the services without any licensing of software products/tools or it is only for software products without services or for both.</mat-label>
+            <input matInput placeholder="Please specify whether the Service Provider will provide only the services without any licensing of software products/tools or it is only for software products without services or for both." formControlName="a5">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>If software purchase agreement Whether source code will be got by BAGIC or not.</mat-label>
+            <input matInput placeholder="If software purchase agreement Whether source code will be got by BAGIC or not." formControlName="a6">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Is the Service Provider provides its services with his employees come and work onsite of BAGIC servers or is it off site or both.</mat-label>
+            <input matInput placeholder="Is the Service Provider provides its services with his employees come and work onsite of BAGIC servers or is it off site or both." formControlName="a7">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Do BAGIC share any Confidential Information to the Service Provider in the process of availing the Services.</mat-label>
+            <input matInput placeholder="Do BAGIC share any Confidential Information to the Service Provider in the process of availing the Services." formControlName="a8">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>If NDA whether both parties are sharing information or only we are sharing or only service provider is sharing the confidential information.</mat-label>
+            <input matInput placeholder="If NDA whether both parties are sharing information or only we are sharing or only service provider is sharing the confidential information." formControlName="a9">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>If use of the servers of vendor/service provider is involved then whether or not the servicers are in India.</mat-label>
+            <input matInput placeholder="If use of the servers of vendor/service provider is involved then whether or not the servicers are in India." formControlName="a10">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Commercials approved by competent authority or not and if approved details thereof with relevant mails.</mat-label>
+            <input matInput placeholder="Commercials approved by competent authority or not and if approved details thereof with relevant mails." formControlName="a11">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>If apart from Agreement any SOW to be agreed, whether IT has vetted such SOW and given go ahead or not. If not please vet and give clearance on the SOW.</mat-label>
+            <input matInput placeholder="If apart from Agreement any SOW to be agreed, whether IT has vetted such SOW and given go ahead or not. If not please vet and give clearance on the SOW." formControlName="a12">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>The period of the Agreement with vendor/service provider</mat-label>
+            <input matInput placeholder="The period of the Agreement with vendor/service provider" formControlName="a13">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Please inform is the period of the Agreement is locked without any right to terminate? If yes please send the competent authority’s approval. Please note that as per corporate governance guidelines, BAGIC have to have right to terminate the Agreement without any penalty and hence not having termination rights is contrary to IRDAI guidelines.</mat-label>
+            <input matInput placeholder="Please inform is the period of the Agreement is locked without any right to terminate? If yes please send the competent authority’s approval. Please note that as per corporate governance guidelines, BAGIC have to have right to terminate the Agreement without any penalty and hence not having termination rights is contrary to IRDAI guidelines." formControlName="a14">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Is any auto renewal of term of the Agreement is there and whether such auto renewal is agreed by competent authority.</mat-label>
+            <input matInput placeholder="Is any auto renewal of term of the Agreement is there and whether such auto renewal is agreed by competent authority." formControlName="a15">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Are there any other specific conditions agreed with vendor/service provider? If yes please specify.</mat-label>
+            <input matInput placeholder="Are there any other specific conditions agreed with vendor/service provider? If yes please specify."  formControlName="a16">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Exact date from which MOU will be valid (effective date)</mat-label>
+            <input matInput placeholder="Exact date from which MOU will be valid (effective date)" formControlName="a17">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Agreement/MOU is for what period?</mat-label>
+            <input matInput placeholder="Agreement/MOU is for what period?" formControlName="a18">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Names of Signing authority to the agreement from tie up partner.</mat-label>
+            <input matInput placeholder="Names of Signing authority to the agreement from tie up partner." formControlName="a19">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Names of Signing authority to the agreement (BAGIC) (Not below the role of City Head).</mat-label>
+            <input matInput placeholder="Names of Signing authority to the agreement (BAGIC) (Not below the role of City Head)." formControlName="a20">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Do we have any existing agreements with this party and if so copies of the same be provided.</mat-label>
+            <input matInput placeholder="Do we have any existing agreements with this party and if so copies of the same be provided." formControlName="a21">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Any other aspects not covered above.</mat-label>
+            <input matInput placeholder="Any other aspects not covered above." formControlName="a22">
+        </mat-form-field>
+        <br/>
+        <mat-toolbar color="primary">Partner Details</mat-toolbar>
+        <br/>
+        <mat-form-field>
+            <mat-label>Company Name and Address</mat-label>
+            <input matInput placeholder="Company Name and Address" formControlName="b1">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Company Spoc Name, Mobile No & email id</mat-label>
+            <input matInput placeholder="Company Spoc Name, Mobile No & email id" formControlName="b2">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>IT Vendor Name and Address</mat-label>
+            <input matInput placeholder="IT Vendor Name and Address" formControlName="b3">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>IT Spoc Name, Mobile No & email id</mat-label>
+            <input matInput placeholder="IT Spoc Name, Mobile No & email id" formControlName="b4">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>IT platform to be used for development</mat-label>
+            <input matInput placeholder="IT platform to be used for development" formControlName="b5">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Application Development Start Date</mat-label>
+            <input matInput placeholder="Application Development Start Date" formControlName="b6">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Application Development end Date</mat-label>
+            <input matInput placeholder="Application Development end Date" formControlName="b7">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Public ip address (UAT and Production)</mat-label>
+            <input matInput placeholder="Public ip address (UAT and Production)" formControlName="b8">
+        </mat-form-field>
+        <br/>
+          <button mat-raised-button type="submit">Submit</button>
+      </form>
+    </mat-card>
+</div>

@@ -34,6 +34,7 @@ export class LoginComponentComponent implements OnInit {
           alert(result.message);
           alert(result.username);
           this.cookieService.set('username',result.username)
+          this.cookieService.set('email',this.formGroup.value['email'])
           this.router.navigate(['/dashboard'])
         }
         else{
@@ -42,6 +43,10 @@ export class LoginComponentComponent implements OnInit {
         }
       })
     }
+  }
+
+  registerFunction(){
+    this.router.navigate(['/register'])
   }
 
 }

@@ -1,3 +1,56 @@
-<p>dashboard works!</p>
+<button style="float:right" mat-raised-button (click)="logoutFunction()">Logout</button>
 
-<p>`Welcome {{this.username}}`</p>
+<h1 style="text-align: center;">Welcome to your dashboard {{this.username}}</h1>
+
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Add Company
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Add Company</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="addCompany()">
+            <mat-form-field>
+              <mat-label>Company Name</mat-label>
+              <input matInput placeholder="Company Name" formControlName="company_name">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Contact Person Name</mat-label>
+                <input matInput placeholder="Contact Person Name" formControlName="contact_person">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Company Email</mat-label>
+                <input matInput placeholder="Company Email" formControlName="company_email">
+            </mat-form-field>          
+            <mat-form-field>
+                <mat-label>Company Address</mat-label>
+                <input matInput placeholder="Company Address" formControlName="company_address">
+            </mat-form-field>
+              <button mat-raised-button type="submit">Submit</button>
+          </form>
+          
+    </mat-card>
+</div>
+</mat-expansion-panel>
+
+
+
+
+      <mat-list>
+  <mat-list-item *ngFor="let data1 of data">
+
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+     {{data1['b1'] }}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  'Name of vendor/service provider':{{a1}}
+  'Constituion of vendor/service provider':{{a2}}
+</mat-expansion-panel>
+    
+    </mat-list-item>
+</mat-list>
+

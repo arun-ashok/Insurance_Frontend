@@ -12,4 +12,7 @@ export class AuthServiceService {
   login(data):Observable<any>{
     return this.http.post(`${baseUrl}user/login`,data)
   }
+  register(data):Observable<any>{
+    return this.http.post(`${baseUrl}users`,data)
+  }
 }

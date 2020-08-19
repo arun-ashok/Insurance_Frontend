@@ -1,0 +1,27 @@
+<button style="float:right" mat-raised-button (click)="logincomp()">Login</button>
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+      <mat-toolbar color="primary">Register</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="registerProcess()">
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" formControlName="firstname">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name" formControlName="lastname">
+              </mat-form-field>          
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+              </mat-form-field>
+              <button mat-raised-button type="submit">Register</button>
+          </form>
+
+    </mat-card>
+</div>

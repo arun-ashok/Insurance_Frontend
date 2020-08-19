@@ -15,12 +15,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { FillFormComponent } from './fill-form/fill-form.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent,
+    FillFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatToolbarModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
