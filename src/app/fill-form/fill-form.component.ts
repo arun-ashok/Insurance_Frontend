@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {AuthServiceService} from '../auth-service.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute, Params} from '@angular/router';
 import { HttpClient} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
 
@@ -12,9 +12,13 @@ import {CookieService} from 'ngx-cookie-service';
 })
 export class FillFormComponent implements OnInit {
   formGroup : FormGroup;
-  email=this.cookieService.get('email');
+  email=''
 
-  constructor(private router: Router,private cookieService:CookieService,private http:HttpClient) {
+  constructor(private router: Router,private cookieService:CookieService,private http:HttpClient,private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.email = params['email'];
+      console.log(this.email);
+  });
    }
 
   ngOnInit(): void {
@@ -59,6 +63,7 @@ export class FillFormComponent implements OnInit {
     if(this.formGroup.valid){
       var payload=this.formGroup.value;
       payload['email']=this.email;
+      console.log(this.email);
       this.http.post<any>('http://localhost:5000/perilwise/v1/companyform', payload).subscribe(result => {
         if(result.success){
           console.log(result);

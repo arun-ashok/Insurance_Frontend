@@ -35,22 +35,53 @@
 </div>
 </mat-expansion-panel>
 
-
-
-
-      <mat-list>
-  <mat-list-item *ngFor="let data1 of data">
-
+<h2 align=center>Saved Forms</h2>
+  <div *ngFor="let data1 of data">
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
         <mat-panel-title>
-     {{data1['b1'] }}
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  'Name of vendor/service provider':{{a1}}
-  'Constituion of vendor/service provider':{{a2}}
-</mat-expansion-panel>
-    
-    </mat-list-item>
-</mat-list>
+          {{data1['b1'] }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+        <pre>
+                      <b>DETAILS</b>                                                                                                                                             <b>Inputs</b>
+          1.  Name of vendor/service provider:                                                                                                                  {{data1['a1']}}
+          2.  Constituion of vendor/service provider:                                                                                                           {{data1['a2']}}
+          3.  Whether vendor/service provider is an Indian entity or foreign entity:                                                                            {{data1['a3']}}
+          4.  Nature/scope of services [please provide the full details point wise and including process as to how it is implemented:                           {{data1['a4']}}
+          5.  Please specify whether the Service Provider will provide only the services without any licensing of software 
+              products/tools or it is only for software products without services or for both':                                                                 {{data1['a5']}}
+          6.  If software purchase agreement Whether source code will be got by BAGIC or not:                                                                   {{data1['a6']}}
+          7.  Is the Service Provider provides its services with his employees come and work onsite of BAGIC servers or is it off site or both:                 {{data1['a7']}}
+          8.  Do BAGIC share any Confidential Information to the Service Provider in the process of availing the Services:                                      {{data1['a8']}}
+          9.  If NDA whether both parties are sharing information or only we are sharing or only service provider is sharing the confidential information:      {{data1['a9']}}
+          10. If use of the servers of vendor/service provider is involved then whether or not the servicers are in India:                                      {{data1['a10']}}
+          11. Commercials approved by competent authority or not and if approved details thereof with relevant mails:                                           {{data1['a11']}}
+          12. If apart from Agreement any SOW to be agreed, whether IT has vetted such SOW and given go ahead or not.
+              If not please vet and give clearance on the SOW:                                                                                                  {{data1['a12']}}
+          13. The period of the Agreement with vendor/service provider:                                                                                         {{data1['a13']}}
+          14. Please inform is the period of the Agreement is locked without any right to terminate? If yes please send the competent authority’s approval. 
+              Please note that as per corporate governance guidelines, BAGIC have to have right to terminate the Agreement without any penalty and 
+              hence not having termination rights is contrary to IRDAI guidelines.:                                                                             {{data1['a14']}}
+          15. Is any auto renewal of term of the Agreement is there and whether such auto renewal is agreed by competent authority.:                            {{data1['a15']}}
+          16. Are there any other specific conditions agreed with vendor/service provider? If yes please specify.:                                              {{data1['a16']}}
+          17. Exact date from which MOU will be valid (effective date):                                                                                         {{data1['a17']}}
+          18. Agreement/MOU is for what period?:                                                                                                                {{data1['a18']}}
+          19. Names of Signing authority to the agreement from tie up partner.:                                                                                 {{data1['a19']}}
+          20. Names of Signing authority to the agreement (BAGIC) (Not below the role of City Head):                                                            {{data1['a20']}}
+          21. Do we have any existing agreements with this party and if so copies of the same be provided:                                                      {{data1['a21']}}
+          22. Any other aspects not covered above.:                                                                                                             {{data1['a22']}}
+          
+                          <b>PARTNER DETAILS</b>
+          1. Company Name and Address:                   {{data1['b1']}}
+          2. Company Spoc Name, Mobile No & email id:    {{data1['b2']}}
+          3. IT Vendor Name and Address:                 {{data1['b3']}}
+          4. IT Spoc Name, Mobile No & email id:         {{data1['b4']}}
+          5. IT platform to be used for development:     {{data1['b5']}}
+          6. Application Development Start Date:         {{data1['b6']}}
+          7. Application Development end Date:           {{data1['b7']}}
+          8. Public ip address (UAT and Production):     {{data1['b8']}}
+        </pre>
+    </mat-expansion-panel> 
+  </div>
 

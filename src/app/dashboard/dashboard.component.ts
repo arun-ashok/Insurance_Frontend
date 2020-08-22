@@ -28,7 +28,6 @@ export class DashboardComponent implements OnInit {
     this.initForm();
     this.http.get('http://localhost:5000/perilwise/v1/companyform',{params:{email:this.email}}).subscribe(result => {
       this.data = result;
-      this.data=[{"b1":"company1"},{"b1":"company2"}];
       console.log(result);
       alert(result);
     })
