@@ -40,8 +40,11 @@ registerProcess(){
       }
       else{
         console.log(result);
-        alert(result);
+        alert(result.message);
       }
+    },
+    error=>{
+      alert(error.error.message);
     })
   }
 }

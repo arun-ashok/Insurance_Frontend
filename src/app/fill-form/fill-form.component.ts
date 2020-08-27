@@ -4,6 +4,7 @@ import {AuthServiceService} from '../auth-service.service';
 import { Router,ActivatedRoute, Params} from '@angular/router';
 import { HttpClient} from '@angular/common/http';
 import {CookieService} from 'ngx-cookie-service';
+import { throwToolbarMixedModesError } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-fill-form',
@@ -13,10 +14,12 @@ import {CookieService} from 'ngx-cookie-service';
 export class FillFormComponent implements OnInit {
   formGroup : FormGroup;
   email=''
+  company_email=''
 
   constructor(private router: Router,private cookieService:CookieService,private http:HttpClient,private activatedRoute: ActivatedRoute) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.email = params['email'];
+      this.company_email=params['company_email']
       console.log(this.email);
   });
    }
@@ -63,6 +66,7 @@ export class FillFormComponent implements OnInit {
     if(this.formGroup.valid){
       var payload=this.formGroup.value;
       payload['email']=this.email;
+      payload['company_email']=this.company_email;
       console.log(this.email);
       this.http.post<any>('http://localhost:5000/perilwise/v1/companyform', payload).subscribe(result => {
         if(result.success){

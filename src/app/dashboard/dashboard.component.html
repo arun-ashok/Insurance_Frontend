@@ -1,3 +1,4 @@
+<div *ngIf="show">
 <button style="float:right" mat-raised-button (click)="logoutFunction()">Logout</button>
 
 <h1 style="text-align: center;">Welcome to your dashboard {{this.username}}</h1>
@@ -41,7 +42,9 @@
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{data1['b1'] }}
+    
         </mat-panel-title>
+        <button style="float:right" mat-raised-button (click)="deletecompany(data1['company_email'])">Delete Company</button>
       </mat-expansion-panel-header>
         <pre>
                       <b>DETAILS</b>                                                                                                                                             <b>Inputs</b>
@@ -83,5 +86,10 @@
           8. Public ip address (UAT and Production):     {{data1['b8']}}
         </pre>
     </mat-expansion-panel> 
+  </div>
+  
+</div>
+<div *ngIf="!show">
+  <h1>Please login</h1>
   </div>
 

@@ -32,15 +32,18 @@ export class LoginComponentComponent implements OnInit {
         if(result.success){
           console.log(result);
           alert(result.message);
-          alert(result.username);
-          this.cookieService.set('username',result.username)
-          this.cookieService.set('email',this.formGroup.value['email'])
+          this.cookieService.set('email',result.email);
+          this.cookieService.set('token',result.token);
+          this.cookieService.set('username',result.username);
           this.router.navigate(['/dashboard'])
         }
         else{
           console.log(result);
           alert(result.message);
         }
+      },
+      error=>{
+        alert(error.error.message);
       })
     }
   }
